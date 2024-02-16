@@ -21,7 +21,7 @@ To get started with this project:
 2. Open the `index.html` file in a web browser to view the project.
 
 ## Project Structure 📂
-
+```
 ├─ 📁 assets
 │  ├─ 📁 css
 │  │  └─ 📄 styles.css
@@ -29,7 +29,7 @@ To get started with this project:
 │     └─ 📄 app.js
 ├─ 📄 index.html
 └─ 📄 README.md
-
+```
 
 ## License 📄
 This project is open-sourced under the MIT License. See the LICENSE.md file for more details.
