@@ -1,0 +1,172 @@
+/* Base styles and layout structure */
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas:
+      "navbar"
+      "welcome"
+      "footer";
+    grid-template-rows: auto 1fr auto; /* Navbar and footer with automatic heights, welcome section takes the remaining space */
+    min-height: 100vh; /* Minimum height to ensure the page fills the viewport */
+    background-color: #f8f9fa;
+}
+
+/* Navbar styles */
+.navbar {
+    grid-area: navbar;
+    background-color: #5f99d6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    position: fixed; /* Makes the navbar fixed at the top */
+    top: 0; /* Positions the navbar at the top of the page */
+    width: 100%; /* Ensures the navbar spans the full width of the screen */
+    z-index: 1000; /* Ensures the navbar is above other elements */
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 30px;
+}
+
+/* Blog title styles */
+.blog-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.blog-title a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Header/welcome section styles */
+.header {
+    grid-area: welcome; /* Adjust to match the grid area name */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Home section styles */
+.home {
+    background-color: #eef4f7; /* Soft background color */
+    width: 100%; /* Ensure it takes full width */
+    min-height: 100vh; /* Minimum height to occupy most of the screen */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Styles for about, features, and contact sections */
+.about, .features, .contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.about, .contact {
+    align-items: flex-start;
+}
+
+.features {
+    align-items: flex-end;
+}
+
+/* Heading styles for about, features, and contact sections */
+.about h2, .features h2, .contact h2 {
+    margin: 100px 50px 20px;
+    font-size: 2.0em;
+    color: #5f99d6;
+}
+
+/* Paragraph styles for about, features, and contact sections */
+.about p, .contact p {
+    margin: 0 50px 20px;
+    color: #617d98;
+    text-align: left;
+}
+
+.features p {
+    margin: 0 50px 20px;
+    color: #617d98;
+    text-align: right;
+}
+
+/* Navbar links styles */
+.navbar-links a {
+    color: #e3eaf3;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a:focus {
+    color: white;
+}
+
+.navbar-links a.active {
+    background-color: #b2e4ff61;
+    font-weight: bold;
+}
+
+/* Consistent background color for home and features */
+.home, .features {
+    background-color: #eef4f7;
+}
+
+/* Home section heading styles */
+.home h2 {
+    margin-top: 0;
+    font-size: 2.2em;
+    color: #5f99d6;
+}
+
+/* Home section paragraph styles */
+.home p {
+    margin: 20px;
+}
+
+/* Footer styles */
+.footer {
+    grid-area: footer;
+    background-color: #5f99d6;
+    color: white;
+    text-align: center;
+    padding: 1rem; /* Adjust for a bit more space */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+      padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+      justify-content: center;
+    }
+
+    .navbar-links a {
+      font-size: 0.9rem;
+      padding: 8px 10px;
+    }
+
+    .blog-title {
+        font-size: 20px;
+    }
+}
